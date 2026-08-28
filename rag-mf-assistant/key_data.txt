@@ -1,0 +1,221 @@
+﻿[Line 0] Match on: HDFC Mid Cap Fund Direct Growth - NAV, Mutual Fund Performance & Portfolio
+Context: HDFC Mid Cap Fund Direct Growth - NAV, Mutual Fund Performance & Portfolio
+Stocks
+Invest in Stocks
+Invest in stocks, ETFs, IPOs with fast orders. Track returns on your stock holdings and view real-time P&L on your positions.
+---
+[Line 37] Match on: Invest in direct mutual funds at zero charges via lump sump investments or SIPs
+Context: Invest in Mutual Funds
+Invest in direct mutual funds at zero charges via lump sump investments or SIPs
+Mutual Fund Houses
+Know about AMCs, funds, fund managers
+NFOΓÇÖs
+---
+[Line 44] Match on: Start SIP
+Context: Mutual funds by Groww designed for your investment goals
+Start SIP
+Build long-term wealth through disciplined monthly investing.
+Mutual Funds screener
+Filter funds based on risk, fund size and more
+---
+[Line 47] Match on: Filter funds based on risk, fund size and more
+Context: Mutual Funds screener
+Filter funds based on risk, fund size and more
+Track Funds
+Import funds and track all investments in a single place
+Compare Funds
+---
+[Line 52] Match on: SIP calculator
+Context: More
+SIP calculator
+Estimate returns on a SIP
+Brokerage calculator
+Estimate charges for your trade/investment
+---
+[Line 53] Match on: Estimate returns on a SIP
+Context: SIP calculator
+Estimate returns on a SIP
+Brokerage calculator
+Estimate charges for your trade/investment
+Margin calculator
+---
+[Line 68] Match on: Very High Risk
+Context: Mid Cap
+Very High Risk
++19.66
+%
+3Y annualised
+---
+[Line 81] Match on: NAV: 26 Aug '26
+Context: All
+NAV: 26 Aug '26
+Γé╣237.36
+Min. for SIP
+Γé╣100
+---
+[Line 83] Match on: Min. for SIP
+Context: Γé╣237.36
+Min. for SIP
+Γé╣100
+Fund size (AUM)
+Γé╣1,05,142.69 Cr
+---
+[Line 85] Match on: Fund size (AUM)
+Context: Γé╣100
+Fund size (AUM)
+Γé╣1,05,142.69 Cr
+Expense ratio
+0.74%
+---
+[Line 87] Match on: Expense ratio
+Context: Γé╣1,05,142.69 Cr
+Expense ratio
+0.74%
+Rating
+5
+---
+[Line 92] Match on: Monthly SIP
+Context: Return calculator
+Monthly SIP
+One time
+Monthly investment
+Γé╣5,000
+---
+[Line 420] Match on: Navneet Education Ltd
+Context: 0.19%
+Navneet Education Ltd
+Consumer Discretionary
+Equity
+0.18%
+---
+[Line 457] Match on: Minimum investments
+Context: See All
+Minimum investments
+Min. for 1st investment
+Γé╣100
+Min. for 2nd investment
+---
+[Line 462] Match on: Min. for SIP
+Context: Γé╣100
+Min. for SIP
+Γé╣100
+Understand terms
+Annualised returns
+---
+[Line 497] Match on: Expense ratio
+Context: Understand terms
+Expense ratio
+A fee payable to a mutual fund house for managing your mutual fund investments.     It is the total percentage of a company's fund assets used for administrative, management, advertising, and other expenses.
+Tax
+A percentage of your capital gains payable to the governm
+---
+[Line 501] Match on: Exit load
+Context: A percentage of your capital gains payable to the government upon exiting your mutual fund investments.     Taxation is categorized as long-term capital gains (LTCG) and short-term capital gains (STCG) depending on your holding period and the type of fund.
+Exit load
+A fee payable to a mutual fund ho
+---
+[Line 503] Match on: Stamp duty
+Context: A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
+Stamp duty
+A form of tax payable for the purchase or sale of an asset or security.
+Exit Load
+01 Jan 2013
+---
+[Line 505] Match on: Exit Load
+Context: A form of tax payable for the purchase or sale of an asset or security.
+Exit Load
+01 Jan 2013
+Exit load of 1% if redeemed within 1 year.
+Exit load, stamp duty and tax
+---
+[Line 507] Match on: Exit load of 1% if redeemed within 1 year.
+Context: 01 Jan 2013
+Exit load of 1% if redeemed within 1 year.
+Exit load, stamp duty and tax
+Exit load
+Exit load of 1% if redeemed within 1 year.
+---
+[Line 508] Match on: Exit load, stamp duty and tax
+Context: Exit load of 1% if redeemed within 1 year.
+Exit load, stamp duty and tax
+Exit load
+Exit load of 1% if redeemed within 1 year.
+Stamp duty on investment: 
+---
+[Line 509] Match on: Exit load
+Context: Exit load, stamp duty and tax
+Exit load
+Exit load of 1% if redeemed within 1 year.
+Stamp duty on investment: 
+0.005% (from July 1st, 2020)
+---
+[Line 510] Match on: Exit load of 1% if redeemed within 1 year.
+Context: Exit load
+Exit load of 1% if redeemed within 1 year.
+Stamp duty on investment: 
+0.005% (from July 1st, 2020)
+from July 1st 2020
+---
+[Line 511] Match on: Stamp duty on investment:
+Context: Exit load of 1% if redeemed within 1 year.
+Stamp duty on investment: 
+0.005% (from July 1st, 2020)
+from July 1st 2020
+Tax implication
+---
+[Line 586] Match on: HDFC Credit Risk Fund Direct Growth
+Context: HDFC Large Cap Fund Direct Growth
+HDFC Credit Risk Fund Direct Growth
+HDFC Banking and PSU Debt Fund Direct Growth
+HDFC Arbitrage Fund Direct Growth
+HDFC Large & Mid Cap Fund Direct Growth
+---
+[Line 615] Match on: HDFC Mid Cap Fund Direct Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This sc
+Context: HDFC Mid Cap Fund Direct Growth
+HDFC Mid Cap Fund Direct Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Chirag Setalvad is the Current Fund Manager of HDFC Mid Cap Fund Direct Growth fund. The fund currently has an Asse
+---
+[Line 616] Match on: The HDFC Mid Cap Fund Direct Growth is rated Very High risk. Minimum SIP Investment is set to Γé╣100. 
+Context: HDFC Mid Cap Fund Direct Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Chirag Setalvad is the Current Fund Manager of HDFC Mid Cap Fund Direct Growth fund. The fund currently has an Asset Under Management(AUM) of Γé╣9,67
+---
+[Line 621] Match on: Fund benchmark
+Context: The scheme seeks to provide long-term capital appreciation/income by investing predominantly in Mid-Cap companies.
+Fund benchmark
+NIFTY Midcap 150 Total Return Index
+Scheme Information Document(SID)
+Fund house
+---
+[Line 628] Match on: Total AUM
+Context: #2 in India
+Total AUM
+Γé╣9,67,910.31 Cr
+Date of Incorporation
+10 Dec 1999
+---
+[Line 659] Match on: Vaishnavi Tech Park, South Tower, 3rd Floor
+Context: HDFC Mid Cap Fund Direct Growth
+Vaishnavi Tech Park, South Tower, 3rd Floor
+Sarjapur Main Road, Bellandur, Bengaluru ΓÇô 560103
+Karnataka
+Contact Us
+---
+[Line 931] Match on: Navi
+Context: Invesco
+Navi
+PGIM
+Mutual Funds Categories
+Best MidCap Mutual funds
+---
+[Line 993] Match on: SIP Calculator
+Context: Groww Silver ETF
+SIP Calculator
+Brokerage Calculator
+RD Calculator
+HRA Calculator
+---
+[Line 1011] Match on: Step-Up SIP Calculator
+Context: EMI Calculator
+Step-Up SIP Calculator
+PPF Calculator
+GST Calculator
+Car Loan EMI Calculator
+---

@@ -1,0 +1,53 @@
+﻿.\venv\Scripts\python.exe : 2026-08-27 22:31:07,217 [INFO] __main__ ù Loading documents from manifest...
+At line:1 char:1
++ .\venv\Scripts\python.exe -m ingestion.preprocessor 2>&1 | Out-File - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-08-27 22:3...rom manifest...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2026-08-27 22:31:07,217 [INFO] ingestion.loader ù Loaded manifest with 5 entries
+2026-08-27 22:31:09,218 [INFO] ingestion.loader ù Fetching: 
+https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth
+2026-08-27 22:31:09,480 [INFO] ingestion.loader ù Fetched 
+https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth (attempt 1, status 200, 418184 bytes)
+2026-08-27 22:31:09,484 [INFO] ingestion.loader ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-mid-cap-fund-direct-growth.html
+2026-08-27 22:31:09,590 [INFO] ingestion.loader ù Parsed 'HDFC Mid-Cap Opportunities Fund': 8205 chars, 4 tables, 4 
+sections
+2026-08-27 22:31:11,596 [INFO] ingestion.loader ù Fetching: 
+https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+2026-08-27 22:31:11,778 [INFO] ingestion.loader ù Fetched 
+https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth (attempt 1, status 200, 425566 bytes)
+2026-08-27 22:31:11,784 [INFO] ingestion.loader ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-small-cap-fund-direct-growth.html
+2026-08-27 22:31:11,902 [INFO] ingestion.loader ù Parsed 'HDFC Small Cap Fund': 8835 chars, 4 tables, 4 sections
+2026-08-27 22:31:13,903 [INFO] ingestion.loader ù Fetching: 
+https://groww.in/mutual-funds/hdfc-multi-cap-fund-direct-growth
+2026-08-27 22:31:14,172 [INFO] ingestion.loader ù Fetched 
+https://groww.in/mutual-funds/hdfc-multi-cap-fund-direct-growth (attempt 1, status 200, 456522 bytes)
+2026-08-27 22:31:14,176 [INFO] ingestion.loader ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-multi-cap-fund-direct-growth.html
+2026-08-27 22:31:14,264 [INFO] ingestion.loader ù Parsed 'HDFC Multi Cap Fund': 10836 chars, 4 tables, 4 sections
+2026-08-27 22:31:16,265 [INFO] ingestion.loader ù Fetching: 
+https://groww.in/mutual-funds/hdfc-large-and-mid-cap-fund-direct-growth
+2026-08-27 22:31:16,768 [INFO] ingestion.loader ù Fetched 
+https://groww.in/mutual-funds/hdfc-large-and-mid-cap-fund-direct-growth (attempt 1, status 200, 597949 bytes)
+2026-08-27 22:31:16,775 [INFO] ingestion.loader ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-large-and-mid-cap-fund-direct-growth.html
+2026-08-27 22:31:16,856 [INFO] ingestion.loader ù Parsed 'HDFC Large and Mid Cap Fund': 18136 chars, 4 tables, 4 
+sections
+2026-08-27 22:31:18,860 [INFO] ingestion.loader ù Fetching: 
+https://groww.in/mutual-funds/hdfc-gold-etf-fund-of-fund-direct-plan-growth
+2026-08-27 22:31:19,086 [INFO] ingestion.loader ù Fetched 
+https://groww.in/mutual-funds/hdfc-gold-etf-fund-of-fund-direct-plan-growth (attempt 1, status 200, 316100 bytes)
+2026-08-27 22:31:19,095 [INFO] ingestion.loader ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-gold-etf-fund-of-fund-direct-plan-growth.html
+2026-08-27 22:31:19,163 [INFO] ingestion.loader ù Parsed 'HDFC Gold ETF Fund of Fund': 3235 chars, 3 tables, 4 sections
+2026-08-27 22:31:19,164 [INFO] ingestion.loader ù Batch load complete: 5 success, 0 error (of 5 web entries)
+2026-08-27 22:31:19,165 [INFO] __main__ ù Preprocessing and saving documents...
+2026-08-27 22:31:19,202 [INFO] __main__ ù Preprocessing complete: 5/5 documents successfully processed and saved.
+[OK] Saved processed document: D:\RAG Project-Grow\rag-mf-assistant\data\processed\mutual-funds_hdfc-mid-cap-fund-direct-growth_processed.json
+[OK] Saved processed document: D:\RAG Project-Grow\rag-mf-assistant\data\processed\mutual-funds_hdfc-small-cap-fund-direct-growth_processed.json
+[OK] Saved processed document: D:\RAG Project-Grow\rag-mf-assistant\data\processed\mutual-funds_hdfc-multi-cap-fund-direct-growth_processed.json
+[OK] Saved processed document: D:\RAG Project-Grow\rag-mf-assistant\data\processed\mutual-funds_hdfc-large-and-mid-cap-fund-direct-growth_processed.json
+[OK] Saved processed document: D:\RAG Project-Grow\rag-mf-assistant\data\processed\mutual-funds_hdfc-gold-etf-fund-of-fund-direct-plan-growth_processed.json

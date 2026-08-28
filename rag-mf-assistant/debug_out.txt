@@ -1,0 +1,13 @@
+--- RAW LLM RESPONSE ---
+The HDFC Mid‑Cap Fund has an exit load of 1% if units are redeemed or switched out within 1 year of allotment.
+
+Source: https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth  
+Last updated from sources: 2026-08-27
+
+--- GROUNDED --- False
+
+--- FINAL ANS ---
+The HDFC Mid‑Cap Fund has an exit load of 1% if units are redeemed or switched out within 1 year of allotment.
+
+Source: https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth
+Last updated from sources: 2026-08-27

@@ -1,0 +1,59 @@
+﻿.\venv\Scripts\python.exe : 2026-08-27 22:25:37,151 [INFO] __main__ ù Loaded manifest with 5 entries
+At line:1 char:1
++ .\venv\Scripts\python.exe -m ingestion.loader 2>&1 | Out-File -FilePa ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-08-27 22:2... with 5 entries:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2026-08-27 22:25:39,152 [INFO] __main__ ù Fetching: https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth
+2026-08-27 22:25:39,357 [INFO] __main__ ù Fetched https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth 
+(attempt 1, status 200, 418184 bytes)
+2026-08-27 22:25:39,362 [INFO] __main__ ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-mid-cap-fund-direct-growth.html
+2026-08-27 22:25:39,410 [INFO] __main__ ù Parsed 'HDFC Mid-Cap Opportunities Fund': 8205 chars, 4 tables, 4 sections
+2026-08-27 22:25:41,410 [INFO] __main__ ù Fetching: https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+2026-08-27 22:25:41,484 [INFO] __main__ ù Fetched https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth 
+(attempt 1, status 200, 425566 bytes)
+2026-08-27 22:25:41,488 [INFO] __main__ ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-small-cap-fund-direct-growth.html
+2026-08-27 22:25:41,581 [INFO] __main__ ù Parsed 'HDFC Small Cap Fund': 8835 chars, 4 tables, 4 sections
+2026-08-27 22:25:43,582 [INFO] __main__ ù Fetching: https://groww.in/mutual-funds/hdfc-multi-cap-fund-direct-growth
+2026-08-27 22:25:43,782 [INFO] __main__ ù Fetched https://groww.in/mutual-funds/hdfc-multi-cap-fund-direct-growth 
+(attempt 1, status 200, 456522 bytes)
+2026-08-27 22:25:43,785 [INFO] __main__ ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-multi-cap-fund-direct-growth.html
+2026-08-27 22:25:43,900 [INFO] __main__ ù Parsed 'HDFC Multi Cap Fund': 10836 chars, 4 tables, 4 sections
+2026-08-27 22:25:45,901 [INFO] __main__ ù Fetching: 
+https://groww.in/mutual-funds/hdfc-large-and-mid-cap-fund-direct-growth
+2026-08-27 22:25:46,493 [INFO] __main__ ù Fetched 
+https://groww.in/mutual-funds/hdfc-large-and-mid-cap-fund-direct-growth (attempt 1, status 200, 597949 bytes)
+2026-08-27 22:25:46,498 [INFO] __main__ ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-large-and-mid-cap-fund-direct-growth.html
+2026-08-27 22:25:46,631 [INFO] __main__ ù Parsed 'HDFC Large and Mid Cap Fund': 18136 chars, 4 tables, 4 sections
+2026-08-27 22:25:48,632 [INFO] __main__ ù Fetching: 
+https://groww.in/mutual-funds/hdfc-gold-etf-fund-of-fund-direct-plan-growth
+2026-08-27 22:25:48,799 [INFO] __main__ ù Fetched 
+https://groww.in/mutual-funds/hdfc-gold-etf-fund-of-fund-direct-plan-growth (attempt 1, status 200, 316100 bytes)
+2026-08-27 22:25:48,802 [INFO] __main__ ù Raw HTML saved to: D:\RAG 
+Project-Grow\rag-mf-assistant\data\raw\mutual-funds_hdfc-gold-etf-fund-of-fund-direct-plan-growth.html
+2026-08-27 22:25:48,881 [INFO] __main__ ù Parsed 'HDFC Gold ETF Fund of Fund': 3235 chars, 3 tables, 4 sections
+2026-08-27 22:25:48,882 [INFO] __main__ ù Batch load complete: 5 success, 0 error (of 5 web entries)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\RAG Project-Grow\rag-mf-assistant\ingestion\loader.py", line 663, in <module>
+    print(
+    ~~~~~^
+        f"  {status_icon} {doc['scheme_name']}"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        f"  |  chars={len(doc['full_text'])}"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nidhi\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+Running loader on all manifest entries...
+

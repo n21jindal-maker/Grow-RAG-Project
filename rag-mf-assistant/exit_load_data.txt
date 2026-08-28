@@ -1,0 +1,402 @@
+﻿=== Line 501: Exit load ===
+  | A percentage of your capital gains payable to the government upon exiting your mutual fund investments.     Taxation is 
+  | Exit load
+  | A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period
+  | Stamp duty
+  | A form of tax payable for the purchase or sale of an asset or security.
+  | Exit Load
+  | 01 Jan 2013
+  | Exit load of 1% if redeemed within 1 year.
+  | Exit load, stamp duty and tax
+  | Exit load
+  | Exit load of 1% if redeemed within 1 year.
+
+=== Line 503: Stamp duty ===
+  | A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period
+  | Stamp duty
+  | A form of tax payable for the purchase or sale of an asset or security.
+  | Exit Load
+  | 01 Jan 2013
+  | Exit load of 1% if redeemed within 1 year.
+  | Exit load, stamp duty and tax
+  | Exit load
+  | Exit load of 1% if redeemed within 1 year.
+  | Stamp duty on investment:
+  | 0.005% (from July 1st, 2020)
+
+=== Line 505: Exit Load ===
+  | A form of tax payable for the purchase or sale of an asset or security.
+  | Exit Load
+  | 01 Jan 2013
+  | Exit load of 1% if redeemed within 1 year.
+  | Exit load, stamp duty and tax
+  | Exit load
+  | Exit load of 1% if redeemed within 1 year.
+  | Stamp duty on investment:
+  | 0.005% (from July 1st, 2020)
+  | from July 1st 2020
+  | Tax implication
+
+=== Line 507: Exit load of 1% if redeemed within 1 year. ===
+  | 01 Jan 2013
+  | Exit load of 1% if redeemed within 1 year.
+  | Exit load, stamp duty and tax
+  | Exit load
+  | Exit load of 1% if redeemed within 1 year.
+  | Stamp duty on investment:
+  | 0.005% (from July 1st, 2020)
+  | from July 1st 2020
+  | Tax implication
+  | If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in
+  | Check past data
+
+=== Line 508: Exit load, stamp duty and tax ===
+  | Exit load of 1% if redeemed within 1 year.
+  | Exit load, stamp duty and tax
+  | Exit load
+  | Exit load of 1% if redeemed within 1 year.
+  | Stamp duty on investment:
+  | 0.005% (from July 1st, 2020)
+  | from July 1st 2020
+  | Tax implication
+  | If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in
+  | Check past data
+  | Compare similar funds
+
+=== Line 509: Exit load ===
+  | Exit load, stamp duty and tax
+  | Exit load
+  | Exit load of 1% if redeemed within 1 year.
+  | Stamp duty on investment:
+  | 0.005% (from July 1st, 2020)
+  | from July 1st 2020
+  | Tax implication
+  | If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in
+  | Check past data
+  | Compare similar funds
+  | Name
+
+=== Line 510: Exit load of 1% if redeemed within 1 year. ===
+  | Exit load
+  | Exit load of 1% if redeemed within 1 year.
+  | Stamp duty on investment:
+  | 0.005% (from July 1st, 2020)
+  | from July 1st 2020
+  | Tax implication
+  | If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in
+  | Check past data
+  | Compare similar funds
+  | Name
+  | 1Y
+
+=== Line 511: Stamp duty on investment: ===
+  | Exit load of 1% if redeemed within 1 year.
+  | Stamp duty on investment:
+  | 0.005% (from July 1st, 2020)
+  | from July 1st 2020
+  | Tax implication
+  | If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in
+  | Check past data
+  | Compare similar funds
+  | Name
+  | 1Y
+  | 3Y
+
+=== Line 616: The HDFC Mid Cap Fund Direct Growth is rated Very High risk. Minimum SIP Investm ===
+  | HDFC Mid Cap Fund Direct Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made availa
+  | The HDFC Mid Cap Fund Direct Growth is rated Very High risk. Minimum SIP Investment is set to Γé╣100. Minimum Lumpsum Inve
+  | ;
+  | Investment Objective
+  | The scheme seeks to provide long-term capital appreciation/income by investing predominantly in Mid-Cap companies.
+  | Fund benchmark
+  | NIFTY Midcap 150 Total Return Index
+  | Scheme Information Document(SID)
+  | Fund house
+  | HDFC Mutual Fund
+
+=== Line 621: Fund benchmark ===
+  | The scheme seeks to provide long-term capital appreciation/income by investing predominantly in Mid-Cap companies.
+  | Fund benchmark
+  | NIFTY Midcap 150 Total Return Index
+  | Scheme Information Document(SID)
+  | Fund house
+  | HDFC Mutual Fund
+  | Rank (total assets)
+  | #2 in India
+  | Total AUM
+  | Γé╣9,67,910.31 Cr
+  | Date of Incorporation
+
+=== Line 762: Gift Nifty ===
+  | Dow Jones Index
+  | Gift Nifty
+  | BSE BANKEX
+  | India VIX
+  | NIFTY Pharma
+  | HANG SENG Index
+  | BSE 100
+  | FTSE 100 Index
+  | S&P 500
+  | NIFTY NEXT 50
+  | NIFTY Metal
+
+=== Line 775: Nifty Pvt Bank ===
+  | CAC Index
+  | Nifty Pvt Bank
+  | NIFTY Bank Options
+  | SBI Options
+  | Bajaj Finance Options
+  | Axis Bank Options
+  | Hindustan Unilever Options
+  | NIFTY Bank Futures
+  | Finnifty Futures
+  | ITC Futures
+  | ICICI Bank Futures
+
+=== Line 864: Nippon India Nifty 500 Momentum 50 Index Fund ===
+  | SBI Contra Fund
+  | Nippon India Nifty 500 Momentum 50 Index Fund
+  | HDFC Balanced Advantage Fund
+  | Quant Mid Cap Fund
+  | Bank of India Small Cap Fund
+  | Quant Multi Asset Fund
+  | Nippon India
+  | TATA
+  | Bandhan
+  | Edelweiss
+  | HSBC
+
+=== Line 883: Motilal Oswal Nifty India Defence Index Fund ===
+  | HDFC Mid Cap Opportunities Fund
+  | Motilal Oswal Nifty India Defence Index Fund
+  | ICICI Prudential India Opportunities Fund
+  | Kotak Small Cap Fund
+  | Canara Robeco Bluechip Equity Fund
+  | GrowwMF
+  | Motilal Oswal
+  | Aditya Birla
+  | Axis
+  | Bank of India
+  | Bajaj Finserv
+
+=== Line 905: Bandhan Nifty Alpha 50 Index Fund ===
+  | ICICI Prudential Infrastructure Fund
+  | Bandhan Nifty Alpha 50 Index Fund
+  | SBI
+  | Quant
+  | Mirae Asset
+  | DSP
+  | Baroda BNP Paribas
+  | Mahindra Manulife
+  | Sundaram
+  | Samco
+  | Taurus
+
+=== Line 939: UTI Nifty 50 Index Fund ===
+  | SBI Magnum Children's Benefit Fund
+  | UTI Nifty 50 Index Fund
+  | JM Flexicap Fund
+  | HSBC Small Cap Fund
+  | Franklin India Multi Cap Fund
+  | ICICI Prudential
+  | LIC
+  | Canara Robeco
+  | Whiteoak
+  | Franklin Templeton
+  | NJ
+
+=== Line 957: Bank Nifty ===
+  | Index
+  | Bank Nifty
+  | Nifty IT
+  | Equity
+  | Nifty 50
+  | Nifty Metal
+  | Nifty Auto
+  | Commodity
+  | Nifty Next 50
+  | Healthcare
+  | Groww
+
+=== Line 958: Nifty IT ===
+  | Bank Nifty
+  | Nifty IT
+  | Equity
+  | Nifty 50
+  | Nifty Metal
+  | Nifty Auto
+  | Commodity
+  | Nifty Next 50
+  | Healthcare
+  | Groww
+  | Gold
+
+=== Line 960: Nifty 50 ===
+  | Equity
+  | Nifty 50
+  | Nifty Metal
+  | Nifty Auto
+  | Commodity
+  | Nifty Next 50
+  | Healthcare
+  | Groww
+  | Gold
+  | Sensex
+  | Defence
+
+=== Line 961: Nifty Metal ===
+  | Nifty 50
+  | Nifty Metal
+  | Nifty Auto
+  | Commodity
+  | Nifty Next 50
+  | Healthcare
+  | Groww
+  | Gold
+  | Sensex
+  | Defence
+  | Groww Arbitrage Fund
+
+=== Line 962: Nifty Auto ===
+  | Nifty Metal
+  | Nifty Auto
+  | Commodity
+  | Nifty Next 50
+  | Healthcare
+  | Groww
+  | Gold
+  | Sensex
+  | Defence
+  | Groww Arbitrage Fund
+  | Groww ELSS Tax Saver Fund
+
+=== Line 964: Nifty Next 50 ===
+  | Commodity
+  | Nifty Next 50
+  | Healthcare
+  | Groww
+  | Gold
+  | Sensex
+  | Defence
+  | Groww Arbitrage Fund
+  | Groww ELSS Tax Saver Fund
+  | Groww Banking & Financial Services Fund
+  | Groww Gold ETF FOF
+
+=== Line 977: Groww Nifty Smallcap 250 Index Fund ===
+  | Groww Aggressive Hybrid Fund
+  | Groww Nifty Smallcap 250 Index Fund
+  | Groww Multicap Fund
+  | Groww Nifty India Defence ETF
+  | Groww Liquid Fund
+  | Groww Dynamic Bond Fund
+  | Groww Nifty Non Cyclical Consumer Index Fund
+  | Groww Nifty India Railways PSU Index Fund
+  | Groww Nifty India Railways ETF
+  | Groww Large Cap Fund
+  | Groww Overnight Fund
+
+=== Line 979: Groww Nifty India Defence ETF ===
+  | Groww Multicap Fund
+  | Groww Nifty India Defence ETF
+  | Groww Liquid Fund
+  | Groww Dynamic Bond Fund
+  | Groww Nifty Non Cyclical Consumer Index Fund
+  | Groww Nifty India Railways PSU Index Fund
+  | Groww Nifty India Railways ETF
+  | Groww Large Cap Fund
+  | Groww Overnight Fund
+  | Groww Nifty EV & New Age Automotive ETF FoF
+  | Groww Nifty 200 ETF FoF
+
+=== Line 982: Groww Nifty Non Cyclical Consumer Index Fund ===
+  | Groww Dynamic Bond Fund
+  | Groww Nifty Non Cyclical Consumer Index Fund
+  | Groww Nifty India Railways PSU Index Fund
+  | Groww Nifty India Railways ETF
+  | Groww Large Cap Fund
+  | Groww Overnight Fund
+  | Groww Nifty EV & New Age Automotive ETF FoF
+  | Groww Nifty 200 ETF FoF
+  | Groww Value Fund
+  | Groww Nifty Total Market Index Fund
+  | Groww Nifty India Defence ETF FoF
+
+=== Line 983: Groww Nifty India Railways PSU Index Fund ===
+  | Groww Nifty Non Cyclical Consumer Index Fund
+  | Groww Nifty India Railways PSU Index Fund
+  | Groww Nifty India Railways ETF
+  | Groww Large Cap Fund
+  | Groww Overnight Fund
+  | Groww Nifty EV & New Age Automotive ETF FoF
+  | Groww Nifty 200 ETF FoF
+  | Groww Value Fund
+  | Groww Nifty Total Market Index Fund
+  | Groww Nifty India Defence ETF FoF
+  | Groww Silver ETF
+
+=== Line 984: Groww Nifty India Railways ETF ===
+  | Groww Nifty India Railways PSU Index Fund
+  | Groww Nifty India Railways ETF
+  | Groww Large Cap Fund
+  | Groww Overnight Fund
+  | Groww Nifty EV & New Age Automotive ETF FoF
+  | Groww Nifty 200 ETF FoF
+  | Groww Value Fund
+  | Groww Nifty Total Market Index Fund
+  | Groww Nifty India Defence ETF FoF
+  | Groww Silver ETF
+  | SIP Calculator
+
+=== Line 987: Groww Nifty EV & New Age Automotive ETF FoF ===
+  | Groww Overnight Fund
+  | Groww Nifty EV & New Age Automotive ETF FoF
+  | Groww Nifty 200 ETF FoF
+  | Groww Value Fund
+  | Groww Nifty Total Market Index Fund
+  | Groww Nifty India Defence ETF FoF
+  | Groww Silver ETF
+  | SIP Calculator
+  | Brokerage Calculator
+  | RD Calculator
+  | HRA Calculator
+
+=== Line 988: Groww Nifty 200 ETF FoF ===
+  | Groww Nifty EV & New Age Automotive ETF FoF
+  | Groww Nifty 200 ETF FoF
+  | Groww Value Fund
+  | Groww Nifty Total Market Index Fund
+  | Groww Nifty India Defence ETF FoF
+  | Groww Silver ETF
+  | SIP Calculator
+  | Brokerage Calculator
+  | RD Calculator
+  | HRA Calculator
+  | Home Loan EMI Calculator
+
+=== Line 990: Groww Nifty Total Market Index Fund ===
+  | Groww Value Fund
+  | Groww Nifty Total Market Index Fund
+  | Groww Nifty India Defence ETF FoF
+  | Groww Silver ETF
+  | SIP Calculator
+  | Brokerage Calculator
+  | RD Calculator
+  | HRA Calculator
+  | Home Loan EMI Calculator
+  | Lumpsum Calculator
+  | Margin Calculator
+
+=== Line 991: Groww Nifty India Defence ETF FoF ===
+  | Groww Nifty Total Market Index Fund
+  | Groww Nifty India Defence ETF FoF
+  | Groww Silver ETF
+  | SIP Calculator
+  | Brokerage Calculator
+  | RD Calculator
+  | HRA Calculator
+  | Home Loan EMI Calculator
+  | Lumpsum Calculator
+  | Margin Calculator
+  | FD Calculator
+

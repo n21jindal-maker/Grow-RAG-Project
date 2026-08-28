@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mutual Fund Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary-container": "#656464",
+                "surface-dim": "#d9dadb",
+                "surface-container-lowest": "#ffffff",
+                "on-error-container": "#93000a",
+                "secondary-fixed-dim": "#c8c6c5",
+                "primary-container": "#00d09c",
+                "inverse-on-surface": "#f0f1f2",
+                "on-tertiary": "#ffffff",
+                "surface-tint": "#006c4f",
+                "surface-container": "#edeeef",
+                "surface-container-low": "#f3f4f5",
+                "tertiary": "#5a5d72",
+                "error-container": "#ffdad6",
+                "inverse-primary": "#2fe0aa",
+                "on-tertiary-fixed-variant": "#43465a",
+                "on-primary-fixed": "#002116",
+                "on-error": "#ffffff",
+                "tertiary-container": "#b4b6ce",
+                "on-secondary-fixed": "#1c1b1b",
+                "surface-container-highest": "#e1e3e4",
+                "surface-variant": "#e1e3e4",
+                "outline": "#6b7b72",
+                "outline-variant": "#bacac1",
+                "primary-fixed": "#59fdc5",
+                "tertiary-fixed": "#dfe1fa",
+                "surface-container-high": "#e7e8e9",
+                "surface": "#f8f9fa",
+                "on-tertiary-container": "#44475b",
+                "background": "#f8f9fa",
+                "on-surface-variant": "#3c4a43",
+                "on-tertiary-fixed": "#171a2c",
+                "secondary-container": "#e5e2e1",
+                "on-surface": "#191c1d",
+                "surface-bright": "#f8f9fa",
+                "primary": "#00d09c",
+                "on-primary-fixed-variant": "#00513b",
+                "on-primary": "#ffffff",
+                "on-primary-container": "#ffffff",
+                "on-secondary-fixed-variant": "#474646",
+                "on-secondary": "#ffffff",
+                "inverse-surface": "#2e3132",
+                "secondary-fixed": "#e5e2e1",
+                "tertiary-fixed-dim": "#c3c5dd",
+                "on-background": "#191c1d",
+                "error": "#ba1a1a",
+                "secondary": "#5f5e5e",
+                "primary-fixed-dim": "#2fe0aa"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "2xl": "1rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "xl": "32px",
+                "md": "16px",
+                "sm": "12px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "xs": "4px",
+                "margin-desktop": "40px",
+                "base": "8px",
+                "lg": "24px"
+        },
+        "fontFamily": {
+                "title-lg": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "display-lg": [
+                        "Inter"
+                ],
+                "label-md": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "title-lg": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-md": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "34px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .glass-header {
+            background: rgba(248, 249, 250, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .message-enter {
+            animation: slideUpFade 0.3s ease-out forwards;
+        }
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .typing-dot {
+            animation: typingPulse 1.4s infinite ease-in-out both;
+        }
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typingPulse {
+            0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+        /* Hide scrollbar for side nav */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="h-full bg-background font-body-md text-on-surface flex flex-col antialiased selection:bg-primary-container selection:text-white">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-surface-variant flex justify-between items-center h-16 px-gutter max-w-[1440px] mx-auto left-0 right-0">
+<div class="flex items-center gap-3">
+<!-- Menu toggle for mobile -->
+<button class="md:hidden text-on-surface hover:text-primary transition-colors cursor-pointer active:scale-95">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-title-lg text-title-lg font-bold text-primary">Mutual Fund Assistant</h1>
+</div>
+<div class="flex items-center gap-4 text-secondary">
+<button aria-label="Account" class="hover:text-primary transition-colors cursor-pointer active:scale-95" data-icon="account_circle">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<button aria-label="Notifications" class="hover:text-primary transition-colors cursor-pointer active:scale-95" data-icon="notifications">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<div class="flex h-full pt-16 max-w-[1440px] mx-auto w-full">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col bg-surface-container-low border-r border-surface-variant h-[calc(100vh-64px)] w-64 p-md gap-base shrink-0 overflow-y-auto no-scrollbar fixed left-0 z-40 md:relative md:top-0">
+<div class="mb-6 flex flex-col gap-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">Investment Hub</div>
+<div class="font-body-md text-body-md text-secondary">Expert Assistant</div>
+</div>
+<button class="bg-primary text-white font-bold rounded-lg py-2 px-4 mb-4 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">add</span>
+            New Analysis
+        </button>
+<div class="flex-1 flex flex-col gap-1">
+<button class="flex items-center gap-3 p-3 bg-secondary-container text-on-secondary-container font-bold rounded-lg text-left transition-colors">
+<span class="material-symbols-outlined">history</span>
+<span>Chat History</span>
+</button>
+<button class="flex items-center gap-3 p-3 text-secondary hover:bg-surface-container-high rounded-lg text-left transition-colors">
+<span class="material-symbols-outlined">trending_up</span>
+<span>Market Insights</span>
+</button>
+<button class="flex items-center gap-3 p-3 text-secondary hover:bg-surface-container-high rounded-lg text-left transition-colors">
+<span class="material-symbols-outlined">query_stats</span>
+<span>Portfolio Analysis</span>
+</button>
+<button class="flex items-center gap-3 p-3 text-secondary hover:bg-surface-container-high rounded-lg text-left transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+<span>Help &amp; Support</span>
+</button>
+</div>
+<div class="mt-auto flex flex-col gap-1 pt-4 border-t border-surface-variant">
+<button class="flex items-center gap-3 p-3 text-secondary hover:bg-surface-container-high rounded-lg text-left transition-colors">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</button>
+<button class="flex items-center gap-3 p-3 text-secondary hover:bg-surface-container-high rounded-lg text-left transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span>Log Out</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col relative min-w-0">
+<!-- Disclaimer Banner -->
+<div class="w-full bg-surface-container-low border-b border-surface-variant text-on-surface-variant px-gutter py-2 flex items-center justify-center gap-2 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">info</span>
+            Facts-only. No investment advice.
+        </div>
+<!-- Main Chat Area -->
+<main class="flex-1 overflow-y-auto pb-[96px] px-margin-mobile md:px-margin-desktop w-full flex flex-col gap-md" id="chat-container">
+<!-- Welcome / Empty State -->
+<div class="flex flex-col items-center justify-center h-full pt-12" id="welcome-state">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-primary">insights</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2 text-center">How can I assist you today?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 text-center max-w-md">Ask me about fund facts, performance metrics, expense ratios, or account procedures.</p>
+<div class="flex flex-wrap justify-center gap-3 w-full max-w-2xl">
+<button class="chip-btn bg-surface-container-lowest border border-outline-variant text-on-surface px-4 py-2 rounded-full text-left font-body-md text-body-md hover:border-primary hover:text-primary transition-colors focus:ring-2 focus:ring-primary-container outline-none shadow-sm flex items-center gap-2">
+                        "What is the expense ratio of HDFC Mid-Cap Fund?"
+                    </button>
+<button class="chip-btn bg-surface-container-lowest border border-outline-variant text-on-surface px-4 py-2 rounded-full text-left font-body-md text-body-md hover:border-primary hover:text-primary transition-colors focus:ring-2 focus:ring-primary-container outline-none shadow-sm flex items-center gap-2">
+                        "What is the exit load for HDFC ELSS Tax Saver?"
+                    </button>
+<button class="chip-btn bg-surface-container-lowest border border-outline-variant text-on-surface px-4 py-2 rounded-full text-left font-body-md text-body-md hover:border-primary hover:text-primary transition-colors focus:ring-2 focus:ring-primary-container outline-none shadow-sm flex items-center gap-2">
+                        "How do I download my account statement?"
+                    </button>
+</div>
+</div>
+<!-- Dynamic Chat Messages will be appended here -->
+</main>
+<!-- Input Area -->
+<div class="absolute bottom-0 w-full z-40 p-margin-mobile md:p-margin-desktop bg-gradient-to-t from-background via-background to-transparent pb-6 pt-12 pointer-events-none">
+<div class="max-w-3xl mx-auto w-full pointer-events-auto">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-2 flex items-end gap-2 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] transition-shadow focus-within:shadow-[0px_4px_20px_rgba(0,208,156,0.1)] focus-within:border-primary/50">
+<textarea class="flex-1 bg-transparent border-0 focus:ring-0 resize-none py-3 px-3 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60" id="chat-input" placeholder="Type your question..." rows="1"></textarea>
+<button class="bg-primary text-white w-12 h-12 rounded-xl flex items-center justify-center shrink-0 hover:bg-primary/90 transition-colors focus:ring-2 focus:ring-primary-container focus:ring-offset-2 outline-none active:scale-95 disabled:opacity-50 disabled:bg-surface-container-high disabled:text-on-surface-variant disabled:cursor-not-allowed mb-0.5 mr-0.5" id="send-btn">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatContainer = document.getElementById('chat-container');
+            const welcomeState = document.getElementById('welcome-state');
+            const chatInput = document.getElementById('chat-input');
+            const sendBtn = document.getElementById('send-btn');
+            const chipBtns = document.querySelectorAll('.chip-btn');
+
+            let isTyping = false;
+
+            // Auto-resize textarea
+            chatInput.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+                if(this.value.trim().length > 0) {
+                    sendBtn.removeAttribute('disabled');
+                } else {
+                    sendBtn.setAttribute('disabled', 'true');
+                }
+            });
+
+            const createMessageElement = (text, isUser = false) => {
+                const wrapper = document.createElement('div');
+                wrapper.className = `flex w-full message-enter ${isUser ? 'justify-end' : 'justify-start'}`;
+                
+                const bubble = document.createElement('div');
+                bubble.className = `max-w-[85%] md:max-w-[75%] p-4 rounded-2xl flex flex-col gap-1 ${
+                    isUser 
+                    ? 'bg-primary text-white rounded-br-sm' 
+                    : 'bg-surface-container-low text-on-surface border border-surface-variant rounded-bl-sm'
+                }`;
+
+                const content = document.createElement('div');
+                content.className = 'font-body-md text-body-md whitespace-pre-wrap';
+                content.innerHTML = text; // In a real app, sanitize this or use a markdown parser safely
+                
+                bubble.appendChild(content);
+
+                if (!isUser) {
+                    const footer = document.createElement('div');
+                    footer.className = 'font-label-md text-[11px] text-on-surface-variant/70 mt-2 pt-2 border-t border-surface-variant/50 flex items-center gap-1';
+                    footer.innerHTML = `<span class="material-symbols-outlined text-[14px]">verified</span> Last updated from sources: 2024-05-20`;
+                    bubble.appendChild(footer);
+                }
+
+                wrapper.appendChild(bubble);
+                return wrapper;
+            };
+
+            const createTypingIndicator = () => {
+                const wrapper = document.createElement('div');
+                wrapper.id = 'typing-indicator';
+                wrapper.className = 'flex w-full justify-start message-enter';
+                wrapper.innerHTML = `
+                    <div class="bg-surface-container-low p-4 rounded-2xl rounded-bl-sm border border-surface-variant flex gap-1 items-center">
+                        <div class="w-2 h-2 rounded-full bg-primary/60 typing-dot"></div>
+                        <div class="w-2 h-2 rounded-full bg-primary/60 typing-dot"></div>
+                        <div class="w-2 h-2 rounded-full bg-primary/60 typing-dot"></div>
+                    </div>
+                `;
+                return wrapper;
+            };
+
+            const scrollToBottom = () => {
+                const chatContainerParent = chatContainer.parentElement;
+                chatContainerParent.scrollTo({
+                    top: chatContainerParent.scrollHeight,
+                    behavior: 'smooth'
+                });
+            };
+
+            const handleSend = () => {
+                const text = chatInput.value.trim();
+                if (!text || isTyping) return;
+
+                // Hide welcome state on first message
+                if (welcomeState) {
+                    welcomeState.style.display = 'none';
+                }
+
+                // Add user message
+                chatContainer.appendChild(createMessageElement(text, true));
+                chatInput.value = '';
+                chatInput.style.height = 'auto';
+                sendBtn.setAttribute('disabled', 'true');
+                scrollToBottom();
+
+                // Mock typing state
+                isTyping = true;
+                const typingIndicator = createTypingIndicator();
+                setTimeout(() => {
+                    chatContainer.appendChild(typingIndicator);
+                    scrollToBottom();
+                }, 300);
+
+                // Mock response
+                setTimeout(() => {
+                    typingIndicator.remove();
+                    const mockResponse = `Based on the latest fact sheet, the expense ratio for **HDFC Mid-Cap Opportunities Fund** (Regular Plan) is currently **1.54%**.\n\nYou can view the full prospectus on the <a href="#" class="text-primary hover:underline font-medium">HDFC AMC portal</a>.`;
+                    chatContainer.appendChild(createMessageElement(mockResponse, false));
+                    isTyping = false;
+                    scrollToBottom();
+                }, 2300);
+            };
+
+            sendBtn.addEventListener('click', handleSend);
+            
+            chatInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    handleSend();
+                }
+            });
+
+            // Handle Chip Clicks
+            chipBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Extract text without quotes
+                    const text = btn.innerText.replace(/^"|"$/g, '').trim();
+                    chatInput.value = text;
+                    handleSend();
+                });
+            });
+            
+            // Initialize button state
+            sendBtn.setAttribute('disabled', 'true');
+        });
+    </script>
+</body></html>

@@ -1,6 +1,6 @@
 import type { ChatResponse } from "./types";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "/api";
+const API_BASE = (process.env.NEXT_PUBLIC_API_URL || "/api").replace(/\/$/, "");
 
 /**
  * Send a user query to the FastAPI backend and return the typed response.

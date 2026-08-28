@@ -158,6 +158,15 @@ class MutualFundAssistant:
         return result
 
 if __name__ == "__main__":
+    import sys
+    
+    if "--ingest-only" in sys.argv:
+        print("Running ingestion pipeline...")
+        from ingestion.indexer import build_index
+        build_index(reset=True)
+        print("Ingestion complete. Exiting.")
+        sys.exit(0)
+        
     assistant = MutualFundAssistant()
     
     # Simple test loop

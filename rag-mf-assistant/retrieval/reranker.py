@@ -10,6 +10,10 @@ logger = logging.getLogger(__name__)
 class CrossEncoderReranker:
     def __init__(self):
         self.model = None
+        if not CROSS_ENCODER_MODEL or CROSS_ENCODER_MODEL.lower() == "none":
+            logger.info("CrossEncoder disabled via config. Reranking will fallback to RRF scores.")
+            return
+
         try:
             from sentence_transformers import CrossEncoder
             self.model = CrossEncoder(CROSS_ENCODER_MODEL)

@@ -24,7 +24,7 @@ TABLE_BATCH_SIZE = 25  # rows per sub-chunk for large tables (header repeated pe
 # which is ONNX-based and has no sklearn/scipy dependency.
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # ONNX model used via chromadb.utils.embedding_functions.ONNXMiniLM_L6_V2
 EMBEDDING_BACKEND = "onnx"  # 'onnx' = ChromaDB ONNXMiniLM_L6_V2 | 'st' = sentence-transformers (blocked)
-CROSS_ENCODER_MODEL = "BAAI/bge-reranker-base"
+CROSS_ENCODER_MODEL = os.getenv("CROSS_ENCODER_MODEL", "BAAI/bge-reranker-base")
 TOP_K_RETRIEVAL = 10  # top-k for both vector search and BM25 (reduced from 20 per plan)
 RRF_K = 60
 TOP_K_RERANK = 3

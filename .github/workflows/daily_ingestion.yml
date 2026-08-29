@@ -54,4 +54,5 @@ jobs:
           git add data/
           
           git commit -m "chore: automated daily data ingestion and index update" || echo "No changes to commit"
+          git pull --rebase || true
           git push

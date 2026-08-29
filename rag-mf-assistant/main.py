@@ -161,9 +161,20 @@ if __name__ == "__main__":
     import sys
     
     if "--ingest-only" in sys.argv:
-        print("Running ingestion pipeline...")
+        print("Running full ingestion pipeline...")
+        from ingestion.loader import load_all_from_manifest
+        from ingestion.preprocessor import process_and_save_all
         from ingestion.indexer import build_index
+        
+        print("1. Fetching new data from sources...")
+        docs = load_all_from_manifest()
+        
+        print("2. Preprocessing documents...")
+        process_and_save_all(docs)
+        
+        print("3. Building vector and keyword indexes...")
         build_index(reset=True)
+        
         print("Ingestion complete. Exiting.")
         sys.exit(0)
         

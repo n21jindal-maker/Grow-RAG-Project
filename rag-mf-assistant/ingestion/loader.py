@@ -24,6 +24,7 @@ import time
 from pathlib import Path
 from typing import Any, Optional
 from urllib.parse import urlparse
+import datetime
 
 import requests
 from bs4 import BeautifulSoup, Tag
@@ -636,7 +637,7 @@ def load_all_from_manifest(
                 url=entry["url"],
                 scheme_name=entry.get("scheme", "Unknown Scheme"),
                 publisher=entry.get("publisher", "Unknown Publisher"),
-                last_updated=entry.get("date", ""),
+                last_updated=datetime.date.today().isoformat(),
                 save_raw=save_raw,
                 request_delay=request_delay,
                 session=session,

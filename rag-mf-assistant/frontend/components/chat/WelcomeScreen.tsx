@@ -11,7 +11,7 @@ interface WelcomeScreenProps {
 const EXAMPLE_QUESTIONS = [
   "What is the expense ratio of HDFC Mid-Cap Fund?",
   "What is the exit load for HDFC Gold ETF Fund?",
-  "How do I download my account statement?",
+  "What is the Returns offered by HDFC Small Cap Fund?",
 ];
 
 export function WelcomeScreen({ onChipClick }: WelcomeScreenProps) {

@@ -89,3 +89,34 @@ class LLMGenerator:
         except Exception as e:
             logger.error(f"Error generating response: {e}")
             return f"Error: {e}"
+
+    def stream_response(self, query: str, assembled_context: str):
+        if not assembled_context.strip():
+            yield "I don't have this information in my current sources. Please check the official HDFC MF website."
+            return
+            
+        # Prepare messages
+        messages = [SystemMessage(content=SYSTEM_PROMPT)]
+        
+        # Add few-shot examples
+        for ex in FEW_SHOT_EXAMPLES:
+            messages.append(HumanMessage(content=f"Context:\n{ex['context']}\n\nQuery: {ex['query']}"))
+            messages.append(AIMessage(content=ex['response']))
+            
+        # Add actual query
+        human_prompt = f"Context:\n{assembled_context}\n\nQuery: {query}"
+        messages.append(HumanMessage(content=human_prompt))
+        
+        # Estimate tokens (rough estimate: 4 chars per token for all text)
+        total_text = "".join([m.content for m in messages])
+        estimated_tokens = len(total_text) // 4 + config.MAX_OUTPUT_TOKENS
+        
+        self.rate_limiter.wait_if_needed(estimated_tokens)
+        
+        try:
+            for chunk in self.llm.stream(messages):
+                yield chunk.content
+        except Exception as e:
+            logger.error(f"Error streaming response: {e}")
+            yield f"\nError: {e}"
+

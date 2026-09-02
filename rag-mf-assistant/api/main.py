@@ -9,6 +9,7 @@ load_dotenv()  # Load environment variables from .env file
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
@@ -72,3 +73,14 @@ def chat_endpoint(request: ChatRequest):
         print(f"Error processing query: {e}")
         traceback.print_exc()
         raise HTTPException(status_code=500, detail="Internal server error while processing query.")
+
+@app.post("/chat/stream")
+def chat_stream_endpoint(request: ChatRequest):
+    if assistant is None:
+        raise HTTPException(status_code=503, detail="Assistant is not initialized yet.")
+    
+    return StreamingResponse(
+        assistant.process_query_stream(request.query),
+        media_type="text/event-stream"
+    )
+

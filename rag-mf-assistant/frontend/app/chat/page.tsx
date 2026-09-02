@@ -15,6 +15,7 @@ type Action =
   | { type: "ADD_USER_MSG"; payload: Message }
   | { type: "ADD_BOT_MSG"; payload: Message }
   | { type: "REPLACE_LOADING_MSG"; payload: Message }
+  | { type: "UPDATE_BOT_MSG"; payload: Partial<Message> & { id: string } }
   | { type: "SET_LOADING"; payload: boolean }
   | { type: "SET_ERROR"; payload: string | null }
   | { type: "CLEAR_CHAT" };
@@ -30,6 +31,13 @@ function chatReducer(state: ChatSession, action: Action): ChatSession {
         ...state,
         messages: state.messages.map((m) =>
           m.isLoading ? action.payload : m
+        ),
+      };
+    case "UPDATE_BOT_MSG":
+      return {
+        ...state,
+        messages: state.messages.map((m) =>
+          m.id === action.payload.id ? { ...m, ...action.payload } : m
         ),
       };
     case "SET_LOADING":
@@ -78,8 +86,9 @@ export default function ChatPage() {
       dispatch({ type: "ADD_USER_MSG", payload: userMsg });
 
       // 2. Add loading placeholder bubble
+      const botMsgId = `bot-${Date.now()}`;
       const loadingMsg: Message = {
-        id: `loading-${Date.now()}`,
+        id: botMsgId,
         role: "assistant",
         content: "",
         timestamp: new Date(),
@@ -88,39 +97,59 @@ export default function ChatPage() {
       dispatch({ type: "ADD_BOT_MSG", payload: loadingMsg });
       dispatch({ type: "SET_LOADING", payload: true });
 
-      // 3. Call API
-      try {
-        const response = await sendMessage(query);
+      // 3. Call Streaming API
+      import("@/lib/api").then(async ({ sendMessageStream }) => {
+        let currentContent = "";
 
-        const botMsg: Message = {
-          id: `bot-${Date.now()}`,
-          role: "assistant",
-          content: response.answer,
-          source_url: response.source_url,
-          last_updated: response.last_updated,
-          query_type: response.query_type,
-          timestamp: new Date(),
-          isLoading: false,
-        };
-        dispatch({ type: "REPLACE_LOADING_MSG", payload: botMsg });
-      } catch (err) {
-        const errMsg: Message = {
-          id: `err-${Date.now()}`,
-          role: "assistant",
-          content:
-            "I encountered an error fetching your answer. Please try again.",
-          query_type: "out_of_scope",
-          timestamp: new Date(),
-          isLoading: false,
-        };
-        dispatch({ type: "REPLACE_LOADING_MSG", payload: errMsg });
-        showToast(err instanceof Error ? err.message : "Unexpected error");
-      } finally {
-        dispatch({ type: "SET_LOADING", payload: false });
-      }
+        try {
+          await sendMessageStream(query, (event) => {
+            if (event.type === "metadata") {
+              dispatch({
+                type: "UPDATE_BOT_MSG",
+                payload: {
+                  id: botMsgId,
+                  query_type: event.query_type,
+                  source_url: event.source_url,
+                  last_updated: event.last_updated,
+                  isLoading: false, // Turn off loading once we get metadata
+                },
+              });
+            } else if (event.type === "chunk") {
+              currentContent += event.text;
+              dispatch({
+                type: "UPDATE_BOT_MSG",
+                payload: {
+                  id: botMsgId,
+                  content: currentContent,
+                  isLoading: false,
+                },
+              });
+            } else if (event.type === "done") {
+              if (event.is_grounded === false) {
+                // If not grounded, show a warning toast (or we could append to the message)
+                showToast("Warning: The generated answer failed groundedness verification.");
+              }
+            }
+          });
+        } catch (err) {
+          const errMsg: Message = {
+            id: botMsgId,
+            role: "assistant",
+            content: "I encountered an error fetching your answer. Please try again.",
+            query_type: "out_of_scope",
+            timestamp: new Date(),
+            isLoading: false,
+          };
+          dispatch({ type: "REPLACE_LOADING_MSG", payload: errMsg });
+          showToast(err instanceof Error ? err.message : "Unexpected error");
+        } finally {
+          dispatch({ type: "SET_LOADING", payload: false });
+        }
+      });
     },
     [state.isLoading]
   );
+
 
   return (
     <div className="flex h-screen bg-background overflow-hidden">

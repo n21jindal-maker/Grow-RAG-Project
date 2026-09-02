@@ -157,6 +157,79 @@ class MutualFundAssistant:
 
         return result
 
+    def process_query_stream(self, query: str):
+        import json
+        
+        # Helper to yield event
+        def yield_event(event_type, **kwargs):
+            event = {"type": event_type}
+            event.update(kwargs)
+            return f"data: {json.dumps(event)}\n\n"
+
+        # 1. PII Scan
+        has_pii, detected = self.pii_scanner.scan(query)
+        if has_pii:
+            yield yield_event("chunk", text=PII_BLOCKED_TEMPLATE)
+            yield yield_event("done", is_grounded=True)
+            return
+
+        # 2. Query Classification
+        intent = self.classifier.classify(query)
+        if intent == 'out_of_scope':
+            yield yield_event("chunk", text=OUT_OF_SCOPE_TEMPLATE)
+            yield yield_event("done", is_grounded=True)
+            return
+        elif intent == 'advisory':
+            yield yield_event("chunk", text=REFUSAL_TEMPLATE)
+            yield yield_event("done", is_grounded=True)
+            return
+            
+        # 3. Preprocess Query
+        prep_res = self.preprocessor.preprocess(query)
+        processed_query = prep_res['processed_query']
+        scheme_name = prep_res['scheme_name']
+
+        # 4. Retrieval
+        retrieved_chunks = self.retriever.retrieve(processed_query, scheme_name=scheme_name)
+        if not retrieved_chunks:
+            yield yield_event("chunk", text=UNGROUNDED_TEMPLATE)
+            yield yield_event("done", is_grounded=True)
+            return
+
+        # 5. Reranking
+        top_chunks = self.reranker.rerank(processed_query, retrieved_chunks)
+        
+        # Send Metadata
+        source_url = None
+        last_updated = None
+        if top_chunks:
+            top_metadata = top_chunks[0].get("metadata", {})
+            source_url = top_metadata.get("source_url")
+            last_updated = top_metadata.get("last_updated")
+            
+        yield yield_event("metadata", query_type=intent, source_url=source_url, last_updated=last_updated)
+
+        # 6. Context Assembly
+        assembled_context = self._assemble_context(top_chunks)
+
+        # 7. LLM Generation (Streaming)
+        raw_answer_buffer = []
+        for chunk in self.generator.stream_response(query, assembled_context):
+            raw_answer_buffer.append(chunk)
+            yield yield_event("chunk", text=chunk)
+            
+        raw_answer = "".join(raw_answer_buffer)
+
+        # Check if fallback strings were triggered during generation
+        if "I don't have this information" in raw_answer or "I'm designed to provide only factual information" in raw_answer or "Error:" in raw_answer:
+            yield yield_event("done", is_grounded=True)
+            return
+
+        # 8. Groundedness Check (after streaming finishes)
+        is_grounded = self.groundedness_checker.check(raw_answer, assembled_context)
+        
+        yield yield_event("done", is_grounded=is_grounded)
+
 if __name__ == "__main__":
     import sys
     
